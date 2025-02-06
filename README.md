@@ -1,25 +1,25 @@
 # Apache Kafka
 
-##### Documentation/Tutorials
+**Documentation/Tutorials**
 	- [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
 	- [Apache Kafka Tutorials - conduktor](https://learn.conduktor.io/kafka/what-is-apache-kafka/)
 	- [Apache Kafka Tutorials - tutorialspoint](https://www.tutorialspoint.com/apache_kafka/index.htm)
 	- [What’s the Difference Between Kafka and RabbitMQ?](https://aws.amazon.com/compare/the-difference-between-rabbitmq-and-kafka/)
 	- [A Comparison of RabbitMQ vs Apache Kafka and When to Use Each](https://www.confluent.io/learn/rabbitmq-vs-apache-kafka/)
 
-##### Install Apache Kafka on Windows using Windows Subsystem for Linux (WSL)
+**Install Apache Kafka on Windows using Windows Subsystem for Linux (WSL)**
 	- [How to Run Apache Kafka on Windows](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 	- [How to Install Apache Kafka on Windows without Zookeeper (KRaft mode)](https://learn.conduktor.io/kafka/how-to-install-apache-kafka-on-windows-without-zookeeper-kraft-mode/)
 
-	![WSL Ubuntu in Windows](/images/Windows-WSL-Ubuntu.png "WSL Ubuntu in Windows")
+	![WSL Ubuntu in Windows](./images/Windows-WSL-Ubuntu.png)
 
-##### Connectivity Issue with WSL
+**Connectivity Issue with WSL**
 	- Simple fix for connectivity issue is to [Disable IPv6 on WSL2](https://itsfoss.com/disable-ipv6-ubuntu-linux/). If this does not work, explore other options.
 	- [Connecting to Kafka running on Windows WSL 2](https://docs.conduktor.io/desktop/kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-on-windows-wsl-2/)
 	- [Error connecting to kafka server via IDE in WSL2](https://stackoverflow.com/questions/62511091/error-connecting-to-kafka-server-via-ide-in-wsl2)
 	- [Stackoverflow: Unable to produce to Kafka topic that is running on WSL 2 from Windows](https://stackoverflow.com/questions/64177422/unable-to-produce-to-kafka-topic-that-is-running-on-wsl-2-from-windows)
 
-##### Start Apache Kafka Server with KRaft
+**Start Apache Kafka Server with KRaft**
 
 	1. Generate a Cluster UUID
 		`KAFKA_CLUSTER_ID="$(./bin/kafka-storage.sh random-uuid)"`
@@ -43,10 +43,10 @@
 		`rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs`
 
 
-##### Screenshots
+**Screenshots**
 
-	![Starting Apache Kafka Server](/images/starting-server.png "Starting Apache Kafka Server")
+	![Starting Apache Kafka Server](./images/starting-server.png)
 
-	![Apache Kafka Server Up & Running](/images/server-started.png "Apache Kafka Server Up & Running")
+	![Apache Kafka Server Up & Running](./images/server-started.png)
 
-	![Apache Kafka Topic Creation](/images/topic-created.png "Apache Kafka Topic Creation")
+	![Apache Kafka Topic Creation](./images/topic-created.png)
