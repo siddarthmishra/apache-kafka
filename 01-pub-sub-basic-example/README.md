@@ -11,7 +11,7 @@
 	- [How to Run Apache Kafka on Windows](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 	- [How to Install Apache Kafka on Windows without Zookeeper (KRaft mode)](https://learn.conduktor.io/kafka/how-to-install-apache-kafka-on-windows-without-zookeeper-kraft-mode/)
 
-	![WSL Ubuntu in Windows](/images/Windows-WSL-Ubuntu.png "WSL Ubuntu in Windows")
+	![WSL Ubuntu in Windows](../images/Windows-WSL-Ubuntu.png "WSL Ubuntu in Windows")
 
 ##### Connectivity Issue with WSL
 	- Simple fix for connectivity issue is to [Disable IPv6 on WSL2](https://itsfoss.com/disable-ipv6-ubuntu-linux/). If this does not work, explore other options.
@@ -45,8 +45,21 @@
 
 ##### Screenshots
 
-	![Starting Apache Kafka Server](/images/starting-server.png "Starting Apache Kafka Server")
+	![Starting Apache Kafka Server](../images/starting-server.png "Starting Apache Kafka Server")
 
-	![Apache Kafka Server Up & Running](/images/server-started.png "Apache Kafka Server Up & Running")
+	![Apache Kafka Server Up & Running](../images/server-started.png "Apache Kafka Server Up & Running")
 
-	![Apache Kafka Topic Creation](/images/topic-created.png "Apache Kafka Topic Creation")
+	![Apache Kafka Topic Creation](../images/topic-created.png "Apache Kafka Topic Creation")
+
+	![ProducerDemo.java](/images/com.siddarthmishra.apachekafka.ProducerDemo.png "ProducerDemo.java")
+
+	![ConsumerDemo.java](/images/com.siddarthmishra.apachekafka.ConsumerDemo.png "ConsumerDemo.java")
+
+	![Java Kafka Producer](/images/producer-connected-to-kafka-and-publish-messages.png "Java Kafka Producer")
+
+	![Java Kafka Consumer](/images/consumer-connected-to-kafka-and-reads-messages.png "Java Kafka Consumer")
+
+	![Java Kafka Producer Closed](/images/producer-closed.png "Java Kafka Producer Closed")
+
+	![Java Kafka Consumer Closed](/images/consumer-unscribed-and-closed.png "Java Kafka Consumer Closed")
+

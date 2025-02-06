@@ -13,7 +13,8 @@ import org.apache.kafka.common.serialization.StringSerializer;
 public class ProducerDemo {
 
 	private static final String KAFKA_TOPIC = "demo-01-pub-sub";
-	private static final String BOOTSTRAP_SERVERS = "127.0.0.1:9092";
+	private static final String BOOTSTRAP_SERVERS = "0.0.0.0:9092";
+	private static final String ACK_FORMAT = "Acknowledged - Topic=%s ; Partition=%s ; Offset=%s";
 
 	public static void main(String[] args) {
 
@@ -30,7 +31,8 @@ public class ProducerDemo {
 				exception.printStackTrace();
 				return;
 			}
-			System.out.println("Acknowledged - " + metadata.toString());
+			String ack_msg = String.format(ACK_FORMAT, metadata.topic(), metadata.partition(), metadata.offset());
+			System.out.println(ack_msg);
 		};
 
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
@@ -38,8 +40,7 @@ public class ProducerDemo {
 			do {
 				System.out.println("Provide the message to be published");
 				input = br.readLine();
-				producer.send(new ProducerRecord<String, String>(KAFKA_TOPIC, Integer.valueOf(0), null, input),
-						callback);
+				producer.send(new ProducerRecord<String, String>(KAFKA_TOPIC, input), callback);
 				producer.flush();
 			} while (!input.trim().equalsIgnoreCase("stop"));
 		} catch (Throwable t) {
@@ -48,5 +49,4 @@ public class ProducerDemo {
 		producer.close();
 		System.out.println("This producer is closed");
 	}
-
 }
