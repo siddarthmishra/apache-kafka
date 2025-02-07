@@ -29,7 +29,7 @@ public class ConsumerDemo {
 
 		boolean doStop = false;
 		do {
-			ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(10000));
+			ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 			for (ConsumerRecord<String, String> record : records) {
 				String consume_message = String.format(CONSUME_FORMAT, record.value(), record.topic(),
 						record.partition(), record.offset(), record.leaderEpoch().orElse(null), record.timestampType(),
