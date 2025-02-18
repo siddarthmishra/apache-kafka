@@ -43,7 +43,7 @@ public class ConsumerDemo {
 		} while (!doStop);
 		consumer.unsubscribe();
 		consumer.close();
-		System.out.println("Consumer is unscribed and closed");
+		System.out.println("Consumer is unsubscribed and closed");
 	}
 
 }
