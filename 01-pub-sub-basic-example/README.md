@@ -6,6 +6,7 @@
 - [Apache Kafka Tutorials - tutorialspoint](https://www.tutorialspoint.com/apache_kafka/index.htm)
 - [What’s the Difference Between Kafka and RabbitMQ?](https://aws.amazon.com/compare/the-difference-between-rabbitmq-and-kafka/)
 - [A Comparison of RabbitMQ vs Apache Kafka and When to Use Each](https://www.confluent.io/learn/rabbitmq-vs-apache-kafka/)
+- [JMS vs Kafka: Which Message Broker Should You Use?](https://www.turing.com/blog/kafka-vs-jms-key-differences)
 
 ### Install Apache Kafka on Windows using Windows Subsystem for Linux (WSL)
 - [How to Run Apache Kafka on Windows](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
