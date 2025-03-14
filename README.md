@@ -23,43 +23,47 @@
 
 ### Start Apache Kafka Server with KRaft
 
-1. Generate a Cluster UUID
+1. Step into Kafka folder assuming "kafka_2.13-3.9.0" is the folder
+	```
+	cd kafka_2.13-3.9.0/
+	```
+2. Generate a Cluster UUID
 	```
 	KAFKA_CLUSTER_ID="$(./bin/kafka-storage.sh random-uuid)"
 	```
-2. Verify the cluster ID
+3. Verify the cluster ID
 	```
 	echo $KAFKA_CLUSTER_ID
 	```
-3. Format Log Directories
+4. Format Log Directories
 	```
 	./bin/kafka-storage.sh format --standalone --config ./config/kraft/server.properties --cluster-id $KAFKA_CLUSTER_ID
 	```
-4. Start the Kafka Server
+5. Start the Kafka Server
 	```
 	./bin/kafka-server-start.sh ./config/kraft/server.properties
 	```
-5. Check existing topics on the kafka server *localhost:9092*
+6. Check existing topics on the kafka server *localhost:9092*
 	```
 	./bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 	```
-6. Create a topic named *demo-01-pub-sub* to store your events on the kafka server *localhost:9092*
+7. Create a topic named *demo-01-pub-sub* to store your events on the kafka server *localhost:9092*
 	```
 	./bin/kafka-topics.sh --create --topic demo-01-pub-sub --bootstrap-server localhost:9092
 	```
-7. Verify the topic *demo-01-pub-sub* on the kafka server *localhost:9092*
+8. Verify the topic *demo-01-pub-sub* on the kafka server *localhost:9092*
 	```
 	./bin/kafka-topics.sh --describe --topic demo-01-pub-sub --bootstrap-server localhost:9092
 	```
-8. Open the Kafka Producer CLI on the kafka server *localhost:9092* (Optional if connecting externally via like Java)
+9. Open the Kafka Producer CLI on the kafka server *localhost:9092* (Optional if connecting externally via like Java)
 	```
 	./bin/kafka-console-producer.sh --topic demo-01-pub-sub --bootstrap-server localhost:9092
 	```
-9. Open the Kafka Consumer CLI on the kafka server *localhost:9092* (Optional if connecting externally via like Java)
+10. Open the Kafka Consumer CLI on the kafka server *localhost:9092* (Optional if connecting externally via like Java)
 	```
 	./bin/kafka-console-consumer.sh --topic demo-01-pub-sub --bootstrap-server localhost:9092
 	```
-10. Stop the Producers, Consumers and Kafka Server with Ctrl+C. Run the following command to clean up. This will remove all the data like topics, messages and offset details.
+11. Stop the Producers, Consumers and Kafka Server with Ctrl+C. Run the following command to clean up. This will remove all the data like topics, messages and offset details.
 	```
 	rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
 	```
